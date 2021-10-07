@@ -1,0 +1,21 @@
+// Colores
+$main-color:#81b622;
+$dark-color:#3d550c;
+$light-color:#ecf87f;
+$medium-color:#59981a;
+// Max width
+$max-width:1200px;
+// Container
+.container {
+    max-width: $max-width;
+    margin: auto;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.sm-container {
+    max-width: $max-width;
+    margin: auto;
+    padding: 0 18rem;
+    overflow: hidden;
+}

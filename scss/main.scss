@@ -1,0 +1,451 @@
+                    @import'config';
+                    @import 'utilities';
+                    @import 'media';
+                    // Genreal 
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    
+                    a {
+                        text-decoration: none;
+                        font-family: 'Unna';
+                    }
+                    
+                    p {
+                        font-size: 1.2rem;
+                        margin: 1rem 0;
+                        text-align: justify;
+                    }
+                    
+                    .logo {
+                        font-family: 'Carattere';
+                        font-size: 3rem;
+                        font-weight: bold;
+                        padding: 0.5rem 0;
+                    }
+                    
+                    i {
+                        color: $dark-color;
+                    }
+                    
+                    img {
+                        width: 100%;
+                    }
+                    
+                    h2 {
+                        color: $dark-color;
+                        font-size: 1.8rem;
+                        padding: 0.5rem 0;
+                    }
+                    
+                    h3 {
+                        color: $main-color;
+                        padding: 0.5rem 0;
+                    }
+                    
+                    body {
+                        line-height: 1.8rem;
+                    }
+                    
+                    // Home
+                    // Nav Bar
+                    #main-nav {
+                        .container {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            .logo {
+                                color: $main-color;
+                            }
+                            .nav-bar {
+                                a {
+                                    font-weight: bold;
+                                    font-size: 1.8rem;
+                                    color: $dark-color;
+                                    &:hover {
+                                        color: $dark-color;
+                                        border-bottom: 2px $dark-color solid;
+                                        padding-bottom: 1rem;
+                                        @media(max-width: 800px) {
+                                            border-bottom: 1px solid #81b622;
+                                        }
+                                    }
+                                }
+                            }
+                            .join i:hover {
+                                color: $main-color;
+                            }
+                        }
+                    }
+                    
+                    // Home
+                    #home {
+                        &-a {
+                            background: #fff;
+                            color: $dark-color;
+                            height: 50vh;
+                            position: relative;
+                            .home-a-content {
+                                position: relative;
+                                text-align: center;
+                                padding-top: 5%;
+                                z-index: 2;
+                                h1 {
+                                    font-size: 4rem;
+                                    line-height: 3rem;
+                                }
+                            }
+                            &::before {
+                                content: '';
+                                background: url('/Healthy_blog/dist/image/home.jpg') no-repeat center / cover;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                opacity: 0.4;
+                            }
+                        }
+                        &-b {
+                            .grid {
+                                display: grid;
+                                grid-template-columns: 2fr 1fr;
+                                gap: 2rem;
+                                .grid-main {
+                                    display: grid;
+                                    grid-template-areas: 'article1 article2' 'article3 article4' 'article5 article6' 'sponsor sponsor';
+                                    gap: 2rem;
+                                    .article1 {
+                                        grid-area: article1;
+                                        width: 100%;
+                                        h2 {
+                                            color: $dark-color;
+                                        }
+                                        img {
+                                            width: 100%;
+                                        }
+                                    }
+                                    .article2 {
+                                        grid-area: article2;
+                                    }
+                                    .article3 {
+                                        grid-area: article3;
+                                    }
+                                    .article4 {
+                                        grid-area: article4;
+                                    }
+                                    .article5 {
+                                        grid-area: article5;
+                                    }
+                                    .article6 {
+                                        grid-area: article6;
+                                    }
+                                    .sponsor {
+                                        grid-area: sponsor;
+                                        text-align: center;
+                                        padding: 5%;
+                                        background: url('/Healthy_blog/dist/image/sponsor.1.jpg') center center / cover;
+                                        color: #fff;
+                                        h2 {
+                                            color: #fff;
+                                        }
+                                    }
+                                    h2 {
+                                        font-size: 1.8rem !important;
+                                        color: $dark-color;
+                                    }
+                                    h3 {
+                                        font-size: 1.5rem;
+                                        color: $main-color !important;
+                                    }
+                                }
+                                .grid-main-article {
+                                    display: grid;
+                                    grid-template-areas: 'text_line_article text_line_article''article1 article2' 'article3 article4' 'article5 article6' 'sponsor sponsor';
+                                    gap: 2rem;
+                                    .article1 {
+                                        grid-area: article1;
+                                        h2 {
+                                            color: $dark-color;
+                                        }
+                                    }
+                                    .article2 {
+                                        grid-area: article2;
+                                    }
+                                    .article3 {
+                                        grid-area: article3;
+                                    }
+                                    .article4 {
+                                        grid-area: article4;
+                                    }
+                                    .article5 {
+                                        grid-area: article5;
+                                    }
+                                    .article6 {
+                                        grid-area: article6;
+                                    }
+                                    .text_line_article {
+                                        grid-area: text_line_article;
+                                        padding: 0.5rem !important;
+                                        align-items: center;
+                                    }
+                                    .sponsor {
+                                        grid-area: sponsor;
+                                        text-align: center;
+                                        padding: 5%;
+                                        background: url('/Healthy_blog/dist/image/sponsor.1.jpg') center center / cover;
+                                        color: #fff;
+                                        h2 {
+                                            color: #fff;
+                                        }
+                                    }
+                                    h2 {
+                                        font-size: 1.8rem !important;
+                                        color: $dark-color;
+                                    }
+                                    h3 {
+                                        font-size: 1.5rem;
+                                        color: $main-color !important;
+                                    }
+                                }
+                                .grid-aside {
+                                    .aside1 {
+                                        justify-content: center;
+                                        text-align: justify;
+                                        .background {
+                                            background: $main-color;
+                                            padding: .5rem;
+                                        }
+                                        .logo {
+                                            font-size: 1.8rem !important;
+                                        }
+                                    }
+                                    .aside2 {
+                                        display: grid;
+                                        grid-template-columns: 1;
+                                        .grid-sm {
+                                            display: grid;
+                                            grid-template-columns: repeat(2, .5fr);
+                                            gap: 1rem;
+                                            margin: 1rem;
+                                            padding: 1rem;
+                                            @media(max-width: 800px) {
+                                                display: flex;
+                                                flex-direction: column;
+                                                padding: 0;
+                                                margin: 0;
+                                            }
+                                            img {
+                                                padding-top: 1rem;
+                                            }
+                                            h2 {
+                                                font-size: 1.3rem;
+                                            }
+                                        }
+                                    }
+                                    .aside3 {
+                                        .aside-content {
+                                            text-align: center;
+                                            padding: 5%;
+                                            background: url('/Healthy_blog/dist/image/sponsor.1.jpg') center center / cover;
+                                            color: #fff;
+                                            h2 {
+                                                color: #fff;
+                                            }
+                                        }
+                                        .text_line {
+                                            display: grid;
+                                            grid-template-columns: repeat(2, 1fr);
+                                        }
+                                    }
+                                    .aside4 {
+                                        .aside-content {
+                                            text-align: center;
+                                            padding: 5%;
+                                            background: url('/Healthy_blog/dist/image/sponsor1.1.jpg') no-repeat center / cover;
+                                            color: $dark-color;
+                                        }
+                                        .text_line {
+                                            display: grid;
+                                            grid-template-columns: repeat(2, 1fr);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &-c {
+                            .grid-form {
+                                display: grid;
+                                grid-template-columns: repeat(2, 1fr);
+                                justify-content: center;
+                                align-items: center;
+                                margin: 1rem 0;
+                                input {
+                                    padding: .5rem 2rem;
+                                    width: 250px;
+                                    height: 42px;
+                                    font-size: 1.2rem;
+                                    font-family: "Font Awesome 5 Brands";
+                                }
+                                label {
+                                    background: $main-color;
+                                    padding: 1rem 4rem;
+                                    border-radius: 2px;
+                                    font-size: 1.2rem;
+                                    margin-left: .5rem;
+                                    font-family: "Font Awesome 5 Brands";
+                                    &:hover {
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    footer {
+                        color: #fff;
+                        background: $dark-color;
+                        i,
+                        a {
+                            color: #fff;
+                            font-size: 1.3rem;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                        a:hover {
+                            color: $main-color;
+                            border-bottom: 2px $main-color solid;
+                            padding-bottom: .5rem;
+                        }
+                        p {
+                            text-align: center;
+                        }
+                        i:hover {
+                            color: $main-color;
+                        }
+                        .footer-menu {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    }
+                    
+                    // Specific Articles
+                    #home-b {
+                        .article1 p {
+                            font-size: 1.2rem;
+                            margin: 1rem 0;
+                            text-align: justify;
+                        }
+                        .pages {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            margin: 2rem 0;
+                            a {
+                                font-size: 1.4rem;
+                                color: $dark-color;
+                            }
+                        }
+                        .join i {
+                            padding: 0.5rem;
+                        }
+                        .text_line_side {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                        }
+                        .lks {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            font-size: 1.2rem;
+                            text-align: center;
+                            i {
+                                cursor: pointer;
+                            }
+                            @media(max-width:500px) {
+                                display: flex;
+                                flex-direction: column;
+                                i {
+                                    padding: 1rem 0;
+                                }
+                            }
+                        }
+                        .comments {
+                            textarea {
+                                font-size: .8rem;
+                                padding: 10px;
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                            img {
+                                width: 60px;
+                                border-radius: 50%;
+                                float: left;
+                                margin-right: 1rem;
+                                margin: .3rem;
+                            }
+                            .d-flex-row {
+                                margin-top: 1rem;
+                                h3 {
+                                    padding: 0;
+                                    margin-top: 1rem 0;
+                                }
+                                .comment-text p {
+                                    font-size: 1rem;
+                                    padding-left: 0.5rem;
+                                    margin: 0.5rem 0;
+                                }
+                            }
+                        }
+                    }
+                    
+                    // Contact
+                    #contact {
+                        .contact-form {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            .contact-left {
+                                padding: 0 4rem;
+                                p {
+                                    font-size: 1.2rem;
+                                    padding: 1rem 0;
+                                }
+                                .logo {
+                                    font-size: 1.3rem !important;
+                                }
+                            }
+                            .contact-right {
+                                display: grid;
+                                align-items: center;
+                                justify-content: center;
+                                input {
+                                    width: 100%;
+                                    height: 50px;
+                                    font-family: "Font Awesome 5 Brands";
+                                    font-size: 1.2rem;
+                                    padding: 0 1rem;
+                                    margin: .3rem;
+                                    text-decoration: none;
+                                    border: 1px solid $main-color;
+                                    &:focus {
+                                        outline: none;
+                                    }
+                                }
+                                textarea {
+                                    width: 100%;
+                                    margin: 0.2rem 0 0 0.2rem;
+                                    border: 1px solid $main-color;
+                                    font-family: "Font Awesome 5 Brands";
+                                    font-size: 1.2rem;
+                                    padding: 1rem;
+                                    &:focus {
+                                        outline: none;
+                                    }
+                                }
+                            }
+                        }
+                    }

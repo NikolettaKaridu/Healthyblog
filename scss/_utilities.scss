@@ -1,0 +1,169 @@
+// Pading classes
+.py {
+    &-1 {
+        padding: 1rem 0rem;
+    }
+    &-2 {
+        padding: 2rem 0rem;
+    }
+    &-3 {
+        padding: 3rem 0rem;
+    }
+    &-4 {
+        padding: 4rem 0rem;
+    }
+}
+
+.px {
+    &-1 {
+        padding: 0rem 1rem;
+    }
+    &-2 {
+        padding: 0rem 2rem;
+    }
+    &-3 {
+        padding: 0rem 3rem;
+    }
+    &-4 {
+        padding: 0rem 4rem;
+    }
+}
+
+// Margin classes
+.my {
+    &-1 {
+        margin: 1rem 0rem;
+    }
+    &-2 {
+        margin: 2rem 0rem;
+    }
+    &-3 {
+        margin: 3rem 0rem;
+    }
+    &-4 {
+        margin: 4rem 0rem;
+    }
+}
+
+.mx {
+    &-1 {
+        margin: 0rem 1rem;
+    }
+    &-2 {
+        margin: 0rem 2rem;
+    }
+    &-3 {
+        margin: 0rem 3rem;
+    }
+    &-4 {
+        margin: 0rem 4rem;
+    }
+}
+
+// Text center
+.text-center {
+    text-align: center;
+}
+
+.bottom-line {
+    height: 3px;
+    width: 12rem;
+    background: $main-color;
+    display: block;
+    margin: 2rem auto 0 auto;
+}
+
+.center-line {
+    height: 3px;
+    width: 10rem;
+    background: $main-color;
+    display: grid;
+    margin: auto;
+}
+
+.side-line {
+    height: 3px;
+    width: 28rem;
+    background: $main-color;
+    display: grid;
+    margin: auto;
+    @media(max-width: 800px) {
+        width: 34rem;
+    }
+    @media(max-width: 500px) {
+        width: 10rem;
+    }
+}
+
+.article-line {
+    height: 2px;
+    width: 36rem;
+    background: $dark-color;
+    display: grid;
+    margin: auto;
+    @media(max-width: 800px) {
+        width: 34rem;
+    }
+    @media(max-width: 500px) {
+        width: 10rem;
+    }
+}
+
+.btn {
+    padding: .5rem;
+    color: #000;
+    border-radius: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: "Font Awesome 5 Brands";
+    background: $main-color;
+    width: 125px;
+    &:hover {
+        color: #fff;
+    }
+}
+
+.btn-contact {
+    padding: 0.5rem;
+    border-radius: 3px;
+    color: #000;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-family: "Font Awesome 5 Brands";
+    width: 125px;
+    margin: 1rem 0.2rem;
+    background: $main-color;
+    &:hover {
+        color: #fff;
+    }
+}
+
+.text_line {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.text_line_side {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 0;
+}
+
+.text_line_article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 0;
+}
+
+.related_articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    h2 {
+        font-size: 1.4rem;
+    }
+    p {
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+}
